@@ -77,7 +77,7 @@ def capacity(k,p,m, power):
 
     # Define the optimization problem
     problem = cp.Problem(objective, constraints)
-    problem.solve()  # Use MOSEK if available
+    problem.solve(solver=cp.SCS)  
     
 def little_problem():
     power = 12
