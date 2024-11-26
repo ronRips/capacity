@@ -135,17 +135,18 @@ def little_problem():
     
 
 if __name__ == "__main__":
-    x = cp.Variable()
-    y = cp.Variable()
+    capacity(1,1,3, 90)
+    # x = cp.Variable()
+    # y = cp.Variable()
 
-    cons = cp.vstack([cp.hstack([x , 2]), cp.hstack([2, y])])
+    # cons = cp.vstack([cp.hstack([x , 2]), cp.hstack([2, y])])
     
-    constraints = [x + y == 1, x >= 0, y >= 0, cons >> 0]
-    objective = cp.Minimize(x**2 + y**2)
-    problem = cp.Problem(objective, constraints)
+    # constraints = [x + y == 1, x >= 0, y >= 0, cons >> 0]
+    # objective = cp.Minimize(x**2 + y**2)
+    # problem = cp.Problem(objective, constraints)
 
     # Solve with different solvers
-    print("SCS:", problem.solve(solver=cp.SCS))
+    # print("SCS:", problem.solve(solver=cp.SCS))
     # print("ECOS:", problem.solve(solver=cp.ECOS))
     # little_problem()
     # log()
